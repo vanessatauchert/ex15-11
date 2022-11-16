@@ -1,0 +1,9 @@
+<h1>{{ getName() }}</h1>
+<h2>{{ getCompleteNumber() }}</h2>
+<br />
+<h3>Conversor bitcoin!</h3>
+<div *ngIf="getCurrentPrice()">
+  <p>Valor do BTC em USD: ${{ this.getCurrentPrice().bpi.USD.rate }}</p>
+  <p>Valor do BTC em BRL: R$ {{ this.getCurrentPrice().bpi.BRL.rate }}</p>
+</div>
+<input type="button" value="Atualizar" (click)="update()" />
